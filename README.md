@@ -167,10 +167,29 @@ for number in range(10):
 <br>
 
 ## **Functions and Methods**
-### and/or/not operators
+### Functions
 #### Code example
 ```python
+"""
+the main purpose of a Function is to return
+something at the end. If not, then it may be
+a Method that modify something somewhere
+at a class or a global scope.
+"""
+def check_if_minor_age(age):
+    return age<18
 
+if check_if_minor_age(17):
+    print("cannot drive at the city")
+
+def get_parent_authorization(authorize):
+    return authorize
+
+parent_authorization = get_parent_authorization(True)
+is_not_kid = not check_if_minor_age(18)
+
+if is_not_kid and parent_authorization:
+    print("can drive in city town")
 ```
 > play with it on this [example](https://repl.it/@andrescabana86/python-functions-and-methods) :video_game:
 
