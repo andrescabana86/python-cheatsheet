@@ -74,7 +74,93 @@ y = 3
 result = x**y
 print("result:", result) # $> result: 8
 ```
-> see working [example :video_game:](https://repl.it/@andrescabana86/python-operators)
+> see working [example](https://repl.it/@andrescabana86/python-operators) :video_game:
+
+<br>
+
+## **Conditional operators**
+### if/elif/else condition
+#### Code example
+```python
+age = 18
+parent_authorization = True
+if age>18:
+    print("can have a drive license")
+elif age>=18:
+    print("can have an early drive license")
+    if parent_authorization:
+        print("can drive")
+else:
+    print("cannot drive")
+```
+> play with it on this [example](https://repl.it/@andrescabana86/conditional-operators) :video_game:
+
+<br>
+
+## **Logical operators**
+### and/or/not operators
+#### Code example
+```python
+age = 18
+parent_authorization = True
+if age>=18 and parent_authorization:
+    print("can have an early drive license")
+    print("can drive")
+else:
+    print("cannot drive")
+
+if age>=18 or parent_authorization:
+    print("can drive b/c of one of the conditions")
+else:
+    print("cannot drive")
+
+if not age>=18:
+    print("cannot drive b/c is not adult")
+```
+
+<br>
+
+## **Loops and iterators**
+### while/for/forin
+#### Code example
+```python
+age = 3
+growup_kid = True
+while growup_kid:
+    if age>=18:
+        print("enough age to drive")
+        break
+    print("kid has to growup")
+    age += 1
+    # code will start again
+    continue
+    growup_kid = False
+
+number = 0
+for number in range(10):
+    number = number + 1
+    if number==5:
+        # The break statement causes a program to 
+        # break out of a loop.
+        print('Number before break ' + str(number))
+        break
+    print('Number is ' + str(number))
+
+number = 0
+for number in range(10):
+    number += 1
+    if number==5:
+        """
+        The pass statement occurring after the if conditional 
+        statement is telling the program to continue to run the 
+        loop and ignore the fact that the variable number evaluates 
+        as equivalent to 5 during one of its iterations.
+        """
+        print('Evaluate number when is ' + str(number))
+        # code evaluates and continue
+        pass
+    print('Number is ' + str(number))
+```
 
 <br>
 
