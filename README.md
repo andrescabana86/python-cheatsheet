@@ -117,11 +117,12 @@ else:
 if not age>=18:
     print("cannot drive b/c is not adult")
 ```
+> play with it on this [example](https://repl.it/@andrescabana86/logical-operators) :video_game:
 
 <br>
 
-## **Loops and iterators**
-### while/for/forin
+## **Loops and Iterators**
+### while/for
 #### Code example
 ```python
 age = 3
@@ -161,6 +162,8 @@ for number in range(10):
         pass
     print('Number is ' + str(number))
 ```
+> play with it on this [example](https://repl.it/@andrescabana86/loops-and-iterators) :video_game:
+
 
 <br>
 
