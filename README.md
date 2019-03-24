@@ -1,10 +1,13 @@
 # Python CheatSheet
 
-## **Styleguide**
+<br>
 
+## **Styleguide**
 The standard style guide at the moment is *PEP8*  
 Link: [PEP8 Style guide](https://www.python.org/dev/peps/pep-0008/)
 > there is an alternative to PEP8, [The Google Style Guide](https://github.com/google/styleguide/blob/gh-pages/pyguide.md) for google developers
+
+<br>
 
 ## **Types of variables**
 ### String
@@ -27,7 +30,9 @@ dna_reference = 7+8j # this is a complex number
 is_alive = True
 ```
 
-## __Operators__
+<br>
+
+## **Operators**
 ### Addition and Substraction
 #### Code example
 ```python
@@ -70,6 +75,8 @@ result = x**y
 print("result:", result) # $> result: 8
 ```
 > see working [example :video_game:](https://repl.it/@andrescabana86/python-operators)
+
+<br>
 
 ## **Reference**
 ### Useful links
