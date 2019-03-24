@@ -1,12 +1,12 @@
 # Python CheatSheet
 
-## __Styleguide__
+## **Styleguide**
 
 The standard style guide at the moment is *PEP8*  
 Link: [PEP8 Style guide](https://www.python.org/dev/peps/pep-0008/)
 > there is an alternative to PEP8, [The Google Style Guide](https://github.com/google/styleguide/blob/gh-pages/pyguide.md) for google developers
 
-## __Types of variables__
+## **Types of variables**
 ### String
 #### Code example
 ```python
@@ -71,7 +71,7 @@ print("result:", result) # $> result: 8
 ```
 > see working [example :video_game:](https://repl.it/@andrescabana86/python-operators)
 
-## Reference
+## **Reference**
 ### Useful links
 #### &ensp;&ensp; Style guide
 * [RealPython style guide article](https://realpython.com/python-pep8/)
