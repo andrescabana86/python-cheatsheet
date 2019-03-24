@@ -93,7 +93,7 @@ elif age>=18:
 else:
     print("cannot drive")
 ```
-> play with it on this [example](https://repl.it/@andrescabana86/conditional-operators) :video_game:
+> play with it on this [example](https://repl.it/@andrescabana86/python-conditional-operators) :video_game:
 
 <br>
 
@@ -117,7 +117,7 @@ else:
 if not age>=18:
     print("cannot drive b/c is not adult")
 ```
-> play with it on this [example](https://repl.it/@andrescabana86/logical-operators) :video_game:
+> play with it on this [example](https://repl.it/@andrescabana86/python-logical-operators) :video_game:
 
 <br>
 
@@ -162,8 +162,17 @@ for number in range(10):
         pass
     print('Number is ' + str(number))
 ```
-> play with it on this [example](https://repl.it/@andrescabana86/loops-and-iterators) :video_game:
+> play with it on this [example](https://repl.it/@andrescabana86/python-loops-and-iterators) :video_game:
 
+<br>
+
+## **Functions and Methods**
+### and/or/not operators
+#### Code example
+```python
+
+```
+> play with it on this [example](https://repl.it/@andrescabana86/python-functions-and-methods) :video_game:
 
 <br>
 
