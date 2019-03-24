@@ -182,7 +182,8 @@ def check_if_minor_age(age):
 if check_if_minor_age(17):
     print("cannot drive at the city")
 
-def get_parent_authorization(authorize):
+# fn with default params
+def get_parent_authorization(authorize=False):
     return authorize
 
 parent_authorization = get_parent_authorization(True)
