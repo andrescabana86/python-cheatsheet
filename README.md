@@ -231,51 +231,6 @@ if is_not_kid and parent_authorization:
 
 </br>
 
-## **Tuples, List, Dictionaries**
-
-### Tuples
-
-> Code example
-
-```python
-# tuples are inmutable objects
-tuple_one = (
-    "name of person",
-    18,
-    "country where it lives"
-)
-print("tuple_one first elm is:", tuple_one[0])
-
-# iterate over tuples
-print("")
-print ("".center(50, '#'))
-print (" iterating over tuple with WHILE ".center(50, '#'))
-print ("".center(50, '#'))
-idx = 0
-while idx < len(tuple_one):
-    print("elm number", tuple_one[idx])
-    idx+=1
-
-print("")
-print ("".center(50, '#'))
-print (" iterating over tuple with FOR LOOP ".center(50, '#'))
-print ("".center(50, '#'))
-for value in tuple_one:
-    print("for loop", value)
-```
-
-### Lists
-
-> Code example
-
-```python
-
-```
-
-> play with it on this [example](https://repl.it/@andrescabana86/python-tuples-lists-diccionaries) :video_game:
-
-</br>
-
 ## **Output Formatting**
 
 ### Print formatting
@@ -344,11 +299,58 @@ for i in Student:
     print (t.substitute(name=i[0], marks=i[1]))
 ```
 
+> play with it on this [example](https://repl.it/@andrescabana86/python-output-formatting) :video_game:
+
 ***refs***
 
 * [Output formatting in Python](https://www.geeksforgeeks.org/python-output-formatting/)
 * [String formatting in Python](https://www.geeksforgeeks.org/string-formatting-in-python-using/)
 * [Template Class in Python](https://www.geeksforgeeks.org/template-class-in-python/)
+
+</br>
+
+## **Tuples, List, Dictionaries**
+
+### Tuples
+
+> Code example
+
+```python
+# tuples are inmutable objects
+tuple_one = (
+    "name of person",
+    18,
+    "country where it lives"
+)
+print("tuple_one first elm is:", tuple_one[0])
+
+# iterate over tuples
+print("")
+print ("".center(50, '#'))
+print (" iterating over tuple with WHILE ".center(50, '#'))
+print ("".center(50, '#'))
+idx = 0
+while idx < len(tuple_one):
+    print("elm number", tuple_one[idx])
+    idx+=1
+
+print("")
+print ("".center(50, '#'))
+print (" iterating over tuple with FOR LOOP ".center(50, '#'))
+print ("".center(50, '#'))
+for value in tuple_one:
+    print("for loop", value)
+```
+
+### Lists
+
+> Code example
+
+```python
+
+```
+
+> play with it on this [example](https://repl.it/@andrescabana86/python-tuples-lists-diccionaries) :video_game:
 
 </br>
 
