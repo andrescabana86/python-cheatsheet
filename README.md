@@ -488,6 +488,63 @@ for values in dic_one.values():
 
 </br>
 
+## **Classes and OOP**
+
+### Class definition and use cases
+
+> Code example
+
+```python
+class Person:
+    name = ""
+    age = 0
+    working = False
+    can_work = False
+    sleeping = False
+    can_sleep = False
+
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def can_work(self):
+        return not self.sleeping
+
+    def work(self):
+        self.working = True
+        return 'OK!'
+
+    def can_sleep(self):
+        return not self.working
+
+    def sleep(self):
+        self.sleeping = True
+        return 'OK!'
+
+
+
+class Hombre(Person):
+    sex = "M"
+
+    def get_sex(self):
+        return self.sex
+
+"""
+this is an example of how can we interact with classes and methods
+"""
+
+jose = Hombre('jose', 26)
+print('Jose is sleeping?', jose.sleeping)
+print('jose can work?', jose.can_work())
+print('jose go and sleep', jose.sleep())
+print('jose can work?', jose.can_work())
+print('Why?, b/c is sleeping?', jose.sleeping)
+```
+
+> play with it on this [example](https://repl.it/@andrescabana86/python-classes-and-oop) :video_game:
+
+</br>
+
 ## **Reference Docs**
 
 ### Useful links
