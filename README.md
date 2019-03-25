@@ -545,6 +545,40 @@ print('Why?, b/c is sleeping?', jose.sleeping)
 
 </br>
 
+## **File Manipulation**
+
+### Class definition and use cases
+
+> Code example
+
+```python
+def read_file_by_line():
+    cfile = open('data.txt', 'r')
+    line = cfile.readline()
+    while line!="":
+        print('line content:', line)
+        line = cfile.readline()
+    print('end of file')
+    cfile.close()
+
+def create_file():
+    cfile = open('data.txt', 'w')
+    cfile.close()
+
+def push_lines_to_file():
+    cfile = open('data.txt', 'a')
+    cfile.write('this is a new line\n')
+    cfile.write('to see what happens in the file\n')
+    cfile.write('end!\n')
+    cfile.close()
+
+create_file() # create an empty file and close
+push_lines_to_file() # push new lines and close
+read_file_by_line() # read line by line and close
+```
+
+> play with it on this [example](https://repl.it/@andrescabana86/python-file-manipulation) :video_game:
+
 ## **Reference Docs**
 
 ### Useful links
