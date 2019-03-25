@@ -495,18 +495,24 @@ for values in dic_one.values():
 > Code example
 
 ```python
+import textwrap
+
 class Person:
-    name = ""
-    age = 0
+    # static class variables
     working = False
     can_work = False
     sleeping = False
     can_sleep = False
+    is_instance = False
 
     def __init__(self, name, age):
+        # instance variables
         self.name = name
         self.age = age
+        self.is_instance = True
 
+    # this is a instance method
+    # first arg is the instance
     def can_work(self):
         return not self.sleeping
 
@@ -521,6 +527,23 @@ class Person:
         self.sleeping = True
         return 'OK!'
 
+    # this is a static class method
+    # it requires the decorator @classmethod
+    # first arg is the class
+    @classmethod
+    def get_status_of_class(cls):
+        text = textwrap.dedent("""\
+            status of class:
+              * working: {}
+              * sleeping: {}
+        """)
+        print(text.format(cls.working, cls.sleeping))
+
+    # this is a static method
+    # it requires the decorator @staticmethod
+    @staticmethod
+    def static_method(is_instance=False):
+        print("this is the pure static {} method\n".format(is_instance))
 
 
 class Hombre(Person):
@@ -532,8 +555,10 @@ class Hombre(Person):
 """
 this is an example of how can we interact with classes and methods
 """
-
+Person.get_status_of_class()
+Person.static_method()
 jose = Hombre('jose', 26)
+jose.static_method(True)
 print('Jose is sleeping?', jose.sleeping)
 print('jose can work?', jose.can_work())
 print('jose go and sleep', jose.sleep())
