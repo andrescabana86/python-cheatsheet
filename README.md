@@ -488,91 +488,9 @@ for values in dic_one.values():
 
 </br>
 
-## **Classes and OOP**
-
-### Class definition and use cases
-
-> Code example
-
-```python
-import textwrap
-
-class Person:
-    # static class variables
-    working = False
-    can_work = False
-    sleeping = False
-    can_sleep = False
-    is_instance = False
-
-    def __init__(self, name, age):
-        # instance variables
-        self.name = name
-        self.age = age
-        self.is_instance = True
-
-    # this is a instance method
-    # first arg is the instance
-    def can_work(self):
-        return not self.sleeping
-
-    def work(self):
-        self.working = True
-        return 'OK!'
-
-    def can_sleep(self):
-        return not self.working
-
-    def sleep(self):
-        self.sleeping = True
-        return 'OK!'
-
-    # this is a static class method
-    # it requires the decorator @classmethod
-    # first arg is the class
-    @classmethod
-    def get_status_of_class(cls):
-        text = textwrap.dedent("""\
-            status of class:
-              * working: {}
-              * sleeping: {}
-        """)
-        print(text.format(cls.working, cls.sleeping))
-
-    # this is a static method
-    # it requires the decorator @staticmethod
-    @staticmethod
-    def static_method(is_instance=False):
-        print("this is the pure static {} method\n".format(is_instance))
-
-
-class Hombre(Person):
-    sex = "M"
-
-    def get_sex(self):
-        return self.sex
-
-"""
-this is an example of how can we interact with classes and methods
-"""
-Person.get_status_of_class()
-Person.static_method()
-jose = Hombre('jose', 26)
-jose.static_method(True)
-print('Jose is sleeping?', jose.sleeping)
-print('jose can work?', jose.can_work())
-print('jose go and sleep', jose.sleep())
-print('jose can work?', jose.can_work())
-print('Why?, b/c is sleeping?', jose.sleeping)
-```
-
-> play with it on this [example](https://repl.it/@andrescabana86/python-classes-and-oop) :video_game:
-
-</br>
-
 ## **File Manipulation**
 
-### Class definition and use cases
+### Local file manipulation
 
 > Code example
 
@@ -603,6 +521,166 @@ read_file_by_line() # read line by line and close
 ```
 
 > play with it on this [example](https://repl.it/@andrescabana86/python-file-manipulation) :video_game:
+
+</br>
+
+## **Classes and OOP**
+
+### Class definition and use cases
+
+> Code example
+
+```python
+import textwrap
+
+class Person:
+    # static class variables
+    working = False
+    can_work = False
+    sleeping = False
+    can_sleep = False
+
+    def __init__(self, name, age):
+        # instance variables
+        self.name = name
+        self.age = age
+        self.is_instance = True
+
+    # this is a instance method
+    # first arg is the instance
+    def can_work(self):
+        return not self.sleeping
+
+    def work(self):
+        self.working = True
+        return 'OK!'
+
+    def can_sleep(self):
+        return not self.working
+
+    def sleep(self):
+        self.sleeping = True
+        return 'OK!'
+
+    @property
+    def is_property_of_instance(self):
+        return "property value: True"
+
+    # this is a static class method
+    # it requires the decorator @classmethod
+    # first arg is the class
+    @classmethod
+    def get_status_of_class(cls):
+        text = textwrap.dedent("""\
+            status of class:
+              * working: {}
+              * sleeping: {}
+        """)
+        print(text.format(cls.working, cls.sleeping))
+
+    # this is a static method
+    # it requires the decorator @staticmethod
+    @staticmethod
+    def static_method(is_instance=False):
+        print("this is the pure static {} method\n".format(is_instance))
+
+
+class Hombre(Person):
+    sex = "M"
+
+    def get_sex(self):
+        return self.sex
+
+
+"""
+this is an example of how can we interact with classes and methods
+"""
+Person.get_status_of_class()
+Person.static_method()
+Person.static_method(True)
+
+print("static variable 'working' from class:", Person.working)
+print("static variable 'sleeping' from class:", Person.working)
+print("")
+
+print("Person.is_property_of_instance before instance", Person.is_property_of_instance)
+# instance
+jose = Hombre('jose', 26)
+# properties can only be access within the instance object
+print("Person.is_property_of_instance after instance", Person.is_property_of_instance)
+print("Person.is_property_of_instance after instance (using instance object)", jose.is_property_of_instance)
+print("")
+print('Jose is sleeping?', jose.sleeping)
+print('jose can work?', jose.can_work())
+print('jose go and sleep', jose.sleep())
+print('jose can work?', jose.can_work())
+print('Why?, b/c is sleeping?', jose.sleeping)
+
+
+class SpecialMethodsClass():
+    """
+    this is a special method
+    it has been called before __init__ constructor
+    """
+    def __new__(cls):
+        print("__new__ special method called!")
+        return super().__new__(cls)
+
+    """
+    this is a special method
+    it has been called before __init__ constructor
+    """
+    def __init__(self):
+        print("__init__ special constructor called!")
+
+print("")
+test_special_class = SpecialMethodsClass()
+```
+
+> play with it on this [example](https://repl.it/@andrescabana86/python-classes-and-oop) :video_game:
+
+## **File Manipulation**
+
+### Local file manipulation
+
+> Code example
+
+```python
+"""
+this is a video game where animals from different
+species can move forward using polimorphism
+"""
+class Dog():
+    def move_forward(self):
+        print("dog is moving using its legs")
+
+
+class Bird():
+    def move_forward(self):
+        print("bird is flying forward")
+
+class Worm():
+    def move_forward(self):
+        print("worm is moving underground zigzagging")
+
+def move_animal_forward(animal):
+    animal.move_forward()
+
+eeve = Dog()
+pidgeotto = Bird()
+caterpie = Worm()
+moves_to_finish = 3
+
+while moves_to_finish > 0:
+    move_animal_forward(eeve)
+    move_animal_forward(pidgeotto)
+    move_animal_forward(caterpie)
+    moves_to_finish -= 1
+```
+
+> play with it on this [example](https://repl.it/@andrescabana86/python-polimorphism) :video_game:
+
+</br>
 
 ## **Reference Docs**
 
