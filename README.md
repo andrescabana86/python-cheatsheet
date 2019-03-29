@@ -639,9 +639,9 @@ test_special_class = SpecialMethodsClass()
 
 > play with it on this [example](https://repl.it/@andrescabana86/python-classes-and-oop) :video_game:
 
-## **File Manipulation**
+## **Polimorphism**
 
-### Local file manipulation
+### Demostration of a polimorphism game dev
 
 > Code example
 
