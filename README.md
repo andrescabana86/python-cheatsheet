@@ -616,6 +616,13 @@ print('jose go and sleep', jose.sleep())
 print('jose can work?', jose.can_work())
 print('Why?, b/c is sleeping?', jose.sleeping)
 
+print("")
+print("# instrospection classes and methods")
+print("jose isinstance of Hombre class", (isinstance(jose, Hombre)))
+print("jose hasattr working", (hasattr(jose, "working")))
+print("jose hasattr driving", (hasattr(jose, "driving")))
+print("dir jose", dir(jose))
+
 
 class SpecialMethodsClass():
     """
