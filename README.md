@@ -689,6 +689,103 @@ while moves_to_finish > 0:
 
 </br>
 
+## **Traceback errors and Exeptions**
+
+### Catching exceptions
+
+> Code example
+
+```python
+"""
+playing with the different types of built-in exceptions
+more docs at -> https://docs.python.org/3/library/exceptions.html
+"""
+# list example
+elist = [2,3]
+
+print("".center(50, "#"))
+print("the next code output an error ".ljust(50, "."))
+print("print(print out of range, elist[5]) ".ljust(50, "."))
+print("this is how to catch the error ".ljust(50, "."))
+print("".center(50, "#"))
+print("")
+
+try:
+    print("print out of range", elist[5])
+except IndexError:
+    print("catching IndexError: this means you are out of range on this list.")
+
+print("")
+print("".center(50, "#"))
+print("this is a complete workflow exception ".ljust(50, "."))
+print("".center(50, "#"))
+print("")
+
+try:
+    print("I am trying to print a number:", elist[1])
+except IndexError:
+    print("this is going to work thus there are no exceptions to print")
+else:
+    print("after printing (without any exception error, this block will execute some code")
+finally:
+    print("this always execute some code")
+
+try:
+    print("I am trying to print a number:", elist[5])
+except IndexError:
+    print("this is going to fail: exception failure catched")
+else:
+    print("this block is not going to execute")
+finally:
+    print("this always execute some code")
+
+print("")
+print("".center(50, "#"))
+print("catch more than one exception ".ljust(50, "."))
+print("".center(50, "#"))
+print("")
+
+try:
+    print("trying to print out of range")
+    print("success", elist[4])
+    print("trying to print type error")
+    print("success", elist["a"])
+except(IndexError, TypeError) as error:
+    print("this catch the error, type:", error)
+
+print("") # other block fail
+
+try:
+    print("trying to print out of range")
+    print("success", elist[1])
+    print("trying to print type error")
+    print("success", elist["a"])
+except(IndexError, TypeError) as e:
+    print("this catch the error, type:", e)
+
+
+print("")
+print("".center(50, "#"))
+print("custom exception handlers ".ljust(50, "."))
+print("".center(50, "#"))
+print("")
+
+
+class MyException(Exception):
+    def __init__(self,error):
+        print("creating my exception: ", error)
+
+try:
+    raise MyException("because I said so... :)")
+except MyException as error:
+    print("I handle my own exception", error)
+
+```
+
+> play with it on this [example](https://repl.it/@andrescabana86/python-polimorphism) :video_game:
+
+</br>
+
 ## **Reference Docs**
 
 ### Useful links
