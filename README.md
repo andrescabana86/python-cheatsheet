@@ -782,7 +782,110 @@ except MyException as error:
 
 ```
 
-> play with it on this [example](https://repl.it/@andrescabana86/python-polimorphism) :video_game:
+> play with it on this [example](https://repl.it/@andrescabana86/python-traceback-and-exceptions) :video_game:
+
+</br>
+
+## **Regular expressions**
+
+### Basic use cases, search and sub
+
+> Code example
+
+```python
+"""
+work with strings
+
+think about...
+alternation |
+quantity {1} ? + *
+grouping ()
+exclusion []
+
+=== types of special regex chars === 
+. represents a char
+\n new line
+/r return
+\t horizontal tab
+\w any char 0-9 a-z
+\W any char 0-9 A-Z
+\s all chars between \w and \W
+\S any char except white space
+\d number 0-9
+\D any char exept 0-9
+^ start of string or start with
+$ end of string or end with
+\ escape chars
+[] any char inside a range are allowed
+^[] any char inside a range are forbidden
+\b separation between number or letter
+
+=== meta chars ===
+types of repetitions
++ one or more repetitions
+* zero or more repetitions
+{n} n number of repetitions 
+? zero or one repetition
+{n:o} min and max range of repetitions
+"""
+
+import re
+
+regex = re.compile("\d{3}")
+chain = "kilo912meter"
+result = regex.search(chain)
+print("chain:", chain)
+print("result regex:", result)
+print("result value:", result.group())
+print("")
+
+regex = re.compile("\Aa[0-9].*(end|fin)$")
+chain = "S4 is the chain to test. end"
+result = regex.search(chain)
+print("chain:", chain)
+print("result regex false:", result)
+print("")
+
+regex = re.compile("^\S[0-9].*(end|find)$")
+result = regex.search(chain)
+print("chain:", chain)
+print("result regex true:", result)
+print("result value:", result.group())
+print("")
+
+print("make a substitution, replace all numbers")
+chain = "thi2s i98s a9238 com923pli8239ca92ted s798t784r367i87n556g"
+regex = re.compile("\d")
+result = regex.sub("", chain)
+print("chain:", chain)
+print("result:", result)
+print("")
+
+print("make a substitution, replace the first 5 numbers")
+chain = "thi2s i98s a9238 com923pli8239ca92ted s798t784r367i87n556g"
+regex = re.compile("\d")
+result = regex.sub("", chain, 7)
+print("chain:", chain)
+print("result:", result)
+print("")
+
+print("Ignore case")
+"""
+IGNORECASE
+ALL
+MULTILINE
+"""
+chain = "THIS IS UNDER CONSTRUCTION"
+regex = re.compile("un", re.IGNORECASE)
+result = regex.search(chain)
+print("chain:", chain)
+print("result regex:", result)
+print("result value:", result.group())
+print("")
+
+```
+
+> play with it on this [example](https://repl.it/@andrescabana86/python-regex) :video_game:
 
 </br>
 
