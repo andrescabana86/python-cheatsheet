@@ -1022,6 +1022,68 @@ tar_file.close()
 
 </br>
 
+## **CSV Manipulation**
+
+### Basic use cases csv
+
+> Code example
+
+```python
+# work with csv
+"""
+types of open file
+'w' write
+'r' read
+'a' append
+"""
+import csv
+
+doc = open('doc.csv', 'w')
+doc_csv_w = csv.writer(doc)
+
+doc_data = [
+    ["Pedro", 12312312],
+    ["Juan", 12312312],
+    ["Calvo", 12312312],
+    ["Guillermo", 12312312],
+    ["Joaquin", 12312312],
+    ["Luciano", 12312312],
+    ["Lucina", 12312312],
+    ["Perales", 12312312],
+    ["Benjamon", 12312312],
+    ["Locazo", 12312312],
+    ["Grodolfo", 12312312],
+    ["Manuel", 12312312],
+    ["Castro", 12312312],
+    ["Obione", 12312312],
+    ["Kindle", 12312312],
+    ["Aznabur", 12312312],
+    ["Jose", 12312312],
+    ["Peloc", 12312312],
+    ["Adrian", 12312312],
+    ["Otazo", 12312312],
+    ["Julian", 12312312],
+    ["Gribaudo", 12312312],
+]
+
+for row in doc_data:
+    doc_csv_w.writerow(row)
+
+doc.close()
+
+doc = open('doc.csv', 'r')
+doc_csv_r = csv.reader(doc)
+
+for (name,number) in doc_csv_r:
+    print(name,number)
+
+doc.close()
+```
+
+> play with it on this [example](https://repl.it/@andrescabana86/python-csv-manipulation) :video_game:
+
+</br>
+
 ## **Reference Docs**
 
 ### Useful links
