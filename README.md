@@ -52,7 +52,22 @@ is_alive = True
 
 > Code example
 
-![Python Sets](https://repl.it/@andrescabana86/python-sets)
+```python
+# handle and work with set
+group_one = set('12345')
+group_two = {'5','6','7','8','9'}
+
+print("group 1:", group_one)
+print("group 2:", group_two)
+
+print("intersection")
+print(group_one.intersection(group_two))
+# or use -> print(group_one & group_two)
+print("diff A to B")
+print(group_one.difference(group_two))
+print("diff B to A")
+print(group_two.difference(group_one))
+```
 
 </br>
 
