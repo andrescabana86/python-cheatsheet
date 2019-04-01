@@ -27,6 +27,9 @@ Link: [PEP8 Style guide](https://www.python.org/dev/peps/pep-0008/)
 name="My Name"
 ```
 
+> play with strings [example](https://repl.it/@andrescabana86/python-string-manipulation) :video_game:
+
+
 ### Numbers
 
 > Code example
@@ -44,6 +47,13 @@ dna_reference = 7+8j # this is a complex number
 ```python
 is_alive = True
 ```
+
+### Sets
+
+> Code example
+
+<iframe height="400px" width="100%" src="https://repl.it/@andrescabana86/python-sets?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals">
+</iframe>
 
 </br>
 
@@ -379,6 +389,20 @@ for idx in reversed(range(len(tuple_two))):
 # lists are mutable objects, in value and size
 # help(list)
 # dir(list) to get available methods
+print("")
+print ("".center(50, '#'))
+print (" Order list of numbers ".center(50, '#'))
+print ("".center(50, '#'))
+list_of_numbers = [2,5,9,7,3,1,6,8]
+print("unordered number list:", list_of_numbers)
+print("ordered number list:", sorted(list_of_numbers))
+print("reverse ordered number list:", sorted(list_of_numbers, reverse=True))
+list_of_letters = ['z','d','e','l','p','a']
+# to mutate the original elm use list_of_numbers.sort()
+print("unordered letter list:", list_of_letters)
+print("ordered letter list:", sorted(list_of_letters))
+print("ordered reverse letter list:", sorted(list_of_letters,reverse=True))
+
 print("")
 print ("".center(50, '#'))
 print (" Play with Lists ".center(50, '#'))
