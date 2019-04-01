@@ -891,7 +891,7 @@ print("")
 
 ## **XML Manipulation**
 
-### Basic use cases
+### Basic use cases xml
 
 > Code example
 
@@ -915,7 +915,7 @@ print("")
 
 ## **JSON Manipulation**
 
-### Basic use cases
+### Basic use cases json
 
 > Code example
 
@@ -939,19 +939,45 @@ print(data["quiz"])
 
 ## **Compression of files**
 
-### Basic use cases
+### Basic use cases zip files
 
 > Code example
 
 ```python
+print("zip manipulation")
 from zipfile import ZipFile
-
 with ZipFile('file.zip', 'w') as z_file:
     z_file.write('file.json')
     z_file.write('file.xml')
     z_file.printdir()
     z_file.close()
 
+print("")
+print("gzip manipulation")
+import gzip
+with open("file.xml", "rb") as file_to_gzip:
+    with gzip.open("file.xml.gzip", "wb") as gzip_file:
+        gzip_file.writelines(file_to_gzip)
+        gzip_file.close()
+
+print("")
+print("bz2 manipulation")
+import bz2
+chain = b"chain chain chain chain chain"
+bz2_chain = bz2.compress(chain)
+print("original chain:", chain)
+print("bz2 chain:", bz2_chain)
+decompress_chain = bz2.decompress(bz2_chain)
+print("decompress chain:", decompress_chain)
+
+print("")
+print("tarball manipulation")
+import tarfile
+tar_file = tarfile.open("file.tar.gz", "w:gz")
+tar_file.add("file.json")
+tar_file.add("file.xml")
+tar_file.list(False)
+tar_file.close()
 ```
 
 > play with it on this [example](https://repl.it/@andrescabana86/python-zip-files) :video_game:
