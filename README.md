@@ -937,6 +937,27 @@ print(data["quiz"])
 
 </br>
 
+## **Compression of files**
+
+### Basic use cases
+
+> Code example
+
+```python
+from zipfile import ZipFile
+
+with ZipFile('file.zip', 'w') as z_file:
+    z_file.write('file.json')
+    z_file.write('file.xml')
+    z_file.printdir()
+    z_file.close()
+
+```
+
+> play with it on this [example](https://repl.it/@andrescabana86/python-zip-files) :video_game:
+
+</br>
+
 ## **Reference Docs**
 
 ### Useful links
