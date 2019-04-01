@@ -889,6 +889,54 @@ print("")
 
 </br>
 
+## **XML Manipulation**
+
+### Basic use cases
+
+> Code example
+
+```python
+# node manipulation
+from xml.dom.minidom import parse, Node
+
+xml_tree = parse("catalog.xml")
+
+print("names of plants:")
+for node in xml_tree.getElementsByTagName("COMMON"):
+    for child in node.childNodes:
+        if (child.nodeType == Node.TEXT_NODE):
+            print(child.data)
+print("")
+```
+
+> play with it on this [example](https://repl.it/@andrescabana86/python-xml-manipulation) :video_game:
+
+</br>
+
+## **JSON Manipulation**
+
+### Basic use cases
+
+> Code example
+
+```python
+# json manipulation
+import json
+
+with open("data.json") as json_file:
+    data = json.load(json_file)
+
+print(data)
+print("")
+print("only first key")
+print(data["quiz"])
+
+```
+
+> play with it on this [example](https://repl.it/@andrescabana86/python-json-manipulation) :video_game:
+
+</br>
+
 ## **Reference Docs**
 
 ### Useful links
