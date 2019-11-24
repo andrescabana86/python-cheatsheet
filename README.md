@@ -69,6 +69,195 @@ print("diff B to A")
 print(group_two.difference(group_one))
 ```
 
+### Tuples
+
+> Code example
+
+```python
+# tuples are inmutable objects
+# help(tuple)
+# dir(tuple) to get available methods
+print("")
+print ("".center(50, '#'))
+print (" Play with Tuples ".center(50, '#'))
+print ("".center(50, '#'))
+tuple_one = ("name of person", 18, "country where it lives")
+print("tuple_one:", tuple_one)
+print("tuple_one length:", len(tuple_one))
+print("tuple_one first elm is:", tuple_one[0])
+
+print("")
+print ("".center(50, '#'))
+print (" Search into tuple ".center(50, '#'))
+print ("".center(50, '#'))
+if 18 in tuple_one:
+    print("""tuple_one has {} in position {}"""
+        .format(18, tuple_one.index(18)))
+
+print("")
+print ("".center(50, '#'))
+print (" iterating over tuple with WHILE ".center(50, '#'))
+print ("".center(50, '#'))
+idx = 0
+while idx < len(tuple_one):
+    print("elm number", tuple_one[idx])
+    idx+=1
+
+print("")
+print ("".center(50, '#'))
+print (" iterating over tuple with FOR LOOP ".center(50, '#'))
+print ("".center(50, '#'))
+for value in tuple_one:
+    print("for loop", value)
+
+print("")
+print ("".center(50, '#'))
+print (" Get tuple from other tuple range ".center(50, '#'))
+print ("".center(50, '#'))
+tuple_two = (0, 1, 2, 3, 4, 5, 6, 7, 8, 9)
+print("tuple_two: ", tuple_two)
+print("get from 0-5", tuple_two[0:5])
+print("get from :5", tuple_two[:5])
+print("get from 2:5", tuple_two[2:5])
+print("get from 5:", tuple_two[5:])
+
+print("")
+print ("".center(50, '#'))
+print (" Iterate tuple inverted ".center(50, '#'))
+print ("".center(50, '#'))
+for idx in reversed(range(len(tuple_two))):
+    print("value:", tuple_two[idx])
+```
+
+### Lists
+
+> Code example
+
+```python
+# lists are mutable objects, in value and size
+# help(list)
+# dir(list) to get available methods
+print("")
+print ("".center(50, '#'))
+print (" Order list of numbers ".center(50, '#'))
+print ("".center(50, '#'))
+list_of_numbers = [2,5,9,7,3,1,6,8]
+print("unordered number list:", list_of_numbers)
+print("ordered number list:", sorted(list_of_numbers))
+print("reverse ordered number list:", sorted(list_of_numbers, reverse=True))
+list_of_letters = ['z','d','e','l','p','a']
+# to mutate the original elm use list_of_numbers.sort()
+print("unordered letter list:", list_of_letters)
+print("ordered letter list:", sorted(list_of_letters))
+print("ordered reverse letter list:", sorted(list_of_letters,reverse=True))
+
+print("")
+print ("".center(50, '#'))
+print (" Play with Lists ".center(50, '#'))
+print ("".center(50, '#'))
+list_one = ("jose", "peloc", 18, 1.71, "estonia")
+print("list_one:", list_one)
+print("list_one length:", len(list_one))
+print("list_one first elm is:", list_one[0])
+
+print("")
+print ("".center(50, '#'))
+print (" iterating over list with WHILE ".center(50, '#'))
+print ("".center(50, '#'))
+idx = 0
+while idx < len(list_one):
+    print("elm number", list_one[idx])
+    idx+=1
+
+print("")
+print ("".center(50, '#'))
+print (" iterating over list with FOR LOOP ".center(50, '#'))
+print ("".center(50, '#'))
+for value in list_one:
+    print("for loop", value)
+
+print("")
+print ("".center(50, '#'))
+print (" Get list from other list range ".center(50, '#'))
+print ("".center(50, '#'))
+list_two = (0, 1, 2, 3, 4, 5, 6, 7, 8, 9)
+print("list_two: ", list_two)
+print("get from 0-5", list_two[0:5])
+print("get from :5", list_two[:5])
+print("get from 2:5", list_two[2:5])
+print("get from 5:", list_two[5:])
+
+print("")
+print ("".center(50, '#'))
+print (" Concatenate two lists ".center(50, '#'))
+print ("".center(50, '#'))
+list_three = list_one+list_two
+print("list_one + list_two: ", list_three)
+list_four = list_one[2:] + list_two[4:7]
+print("list_one[2:] + list_two[4:7]", list_four)
+
+print("")
+print ("".center(50, '#'))
+print (" Search into lists ".center(50, '#'))
+print ("".center(50, '#'))
+location = "estonia"
+if location in list_one:
+    print("""list_one has {} in position {}"""
+        .format(location, list_one.index(location)))
+
+print("")
+print ("".center(50, '#'))
+print (" Iterate list inverted ".center(50, '#'))
+print ("".center(50, '#'))
+for idx in reversed(range(len(list_one))):
+    print("value:", list_one[idx])
+```
+
+### Dictionaries
+
+> Code example
+
+```python
+# dictionaries are mutable objects, in value and size
+# help(dic)
+# dir(dic) to get available methods
+print("")
+print ("".center(50, '#'))
+print (" Play with Dictionaries ".center(50, '#'))
+print ("".center(50, '#'))
+dic_one = {
+ 'red': 1,
+ 'blue': 2,
+ 'green': 3,
+ 'yellow': 4,
+ 'orange': 5,
+ 'brown': 6,
+ 'purple': 7,
+ 'gray': 8,
+ 'white': 9,
+ 'black': 10
+}
+print("dic_one:", dic_one)
+print("dic_one length:", len(dic_one))
+print("dic_one red key is:", dic_one['red'])
+
+print("")
+print ("".center(50, '#'))
+print (" iterating over dictionary with FOR LOOP ".center(50, '#'))
+print ("".center(50, '#'))
+print('Iterate over dic.items()')
+for key, value in dic_one.items():
+    print('for key: {}, value: {}'.format(key, value))
+print('Iterate over dic.keys()')
+for key in dic_one.keys():
+    print('for key:', key)
+print('Iterate over dic.values()')
+for values in dic_one.values():
+    print('for values:', values)
+```
+
+> play with it on this [example](https://repl.it/@andrescabana86/python-tuples-lists-diccionaries) :video_game:
+
 </br>
 
 ## **Operators**
@@ -330,199 +519,6 @@ for i in Student:
 * [Output formatting in Python](https://www.geeksforgeeks.org/python-output-formatting/)
 * [String formatting in Python](https://www.geeksforgeeks.org/string-formatting-in-python-using/)
 * [Template Class in Python](https://www.geeksforgeeks.org/template-class-in-python/)
-
-</br>
-
-## **Tuples, List, Dictionaries**
-
-### Tuples
-
-> Code example
-
-```python
-# tuples are inmutable objects
-# help(tuple)
-# dir(tuple) to get available methods
-print("")
-print ("".center(50, '#'))
-print (" Play with Tuples ".center(50, '#'))
-print ("".center(50, '#'))
-tuple_one = ("name of person", 18, "country where it lives")
-print("tuple_one:", tuple_one)
-print("tuple_one length:", len(tuple_one))
-print("tuple_one first elm is:", tuple_one[0])
-
-print("")
-print ("".center(50, '#'))
-print (" Search into tuple ".center(50, '#'))
-print ("".center(50, '#'))
-if 18 in tuple_one:
-    print("""tuple_one has {} in position {}"""
-        .format(18, tuple_one.index(18)))
-
-print("")
-print ("".center(50, '#'))
-print (" iterating over tuple with WHILE ".center(50, '#'))
-print ("".center(50, '#'))
-idx = 0
-while idx < len(tuple_one):
-    print("elm number", tuple_one[idx])
-    idx+=1
-
-print("")
-print ("".center(50, '#'))
-print (" iterating over tuple with FOR LOOP ".center(50, '#'))
-print ("".center(50, '#'))
-for value in tuple_one:
-    print("for loop", value)
-
-print("")
-print ("".center(50, '#'))
-print (" Get tuple from other tuple range ".center(50, '#'))
-print ("".center(50, '#'))
-tuple_two = (0, 1, 2, 3, 4, 5, 6, 7, 8, 9)
-print("tuple_two: ", tuple_two)
-print("get from 0-5", tuple_two[0:5])
-print("get from :5", tuple_two[:5])
-print("get from 2:5", tuple_two[2:5])
-print("get from 5:", tuple_two[5:])
-
-print("")
-print ("".center(50, '#'))
-print (" Iterate tuple inverted ".center(50, '#'))
-print ("".center(50, '#'))
-for idx in reversed(range(len(tuple_two))):
-    print("value:", tuple_two[idx])
-```
-
-### Lists
-
-> Code example
-
-```python
-# lists are mutable objects, in value and size
-# help(list)
-# dir(list) to get available methods
-print("")
-print ("".center(50, '#'))
-print (" Order list of numbers ".center(50, '#'))
-print ("".center(50, '#'))
-list_of_numbers = [2,5,9,7,3,1,6,8]
-print("unordered number list:", list_of_numbers)
-print("ordered number list:", sorted(list_of_numbers))
-print("reverse ordered number list:", sorted(list_of_numbers, reverse=True))
-list_of_letters = ['z','d','e','l','p','a']
-# to mutate the original elm use list_of_numbers.sort()
-print("unordered letter list:", list_of_letters)
-print("ordered letter list:", sorted(list_of_letters))
-print("ordered reverse letter list:", sorted(list_of_letters,reverse=True))
-
-print("")
-print ("".center(50, '#'))
-print (" Play with Lists ".center(50, '#'))
-print ("".center(50, '#'))
-list_one = ("jose", "peloc", 18, 1.71, "estonia")
-print("list_one:", list_one)
-print("list_one length:", len(list_one))
-print("list_one first elm is:", list_one[0])
-
-print("")
-print ("".center(50, '#'))
-print (" iterating over list with WHILE ".center(50, '#'))
-print ("".center(50, '#'))
-idx = 0
-while idx < len(list_one):
-    print("elm number", list_one[idx])
-    idx+=1
-
-print("")
-print ("".center(50, '#'))
-print (" iterating over list with FOR LOOP ".center(50, '#'))
-print ("".center(50, '#'))
-for value in list_one:
-    print("for loop", value)
-
-print("")
-print ("".center(50, '#'))
-print (" Get list from other list range ".center(50, '#'))
-print ("".center(50, '#'))
-list_two = (0, 1, 2, 3, 4, 5, 6, 7, 8, 9)
-print("list_two: ", list_two)
-print("get from 0-5", list_two[0:5])
-print("get from :5", list_two[:5])
-print("get from 2:5", list_two[2:5])
-print("get from 5:", list_two[5:])
-
-print("")
-print ("".center(50, '#'))
-print (" Concatenate two lists ".center(50, '#'))
-print ("".center(50, '#'))
-list_three = list_one+list_two
-print("list_one + list_two: ", list_three)
-list_four = list_one[2:] + list_two[4:7]
-print("list_one[2:] + list_two[4:7]", list_four)
-
-print("")
-print ("".center(50, '#'))
-print (" Search into lists ".center(50, '#'))
-print ("".center(50, '#'))
-location = "estonia"
-if location in list_one:
-    print("""list_one has {} in position {}"""
-        .format(location, list_one.index(location)))
-
-print("")
-print ("".center(50, '#'))
-print (" Iterate list inverted ".center(50, '#'))
-print ("".center(50, '#'))
-for idx in reversed(range(len(list_one))):
-    print("value:", list_one[idx])
-```
-
-### Dictionaries
-
-> Code example
-
-```python
-# dictionaries are mutable objects, in value and size
-# help(dic)
-# dir(dic) to get available methods
-print("")
-print ("".center(50, '#'))
-print (" Play with Dictionaries ".center(50, '#'))
-print ("".center(50, '#'))
-dic_one = {
- 'red': 1,
- 'blue': 2,
- 'green': 3,
- 'yellow': 4,
- 'orange': 5,
- 'brown': 6,
- 'purple': 7,
- 'gray': 8,
- 'white': 9,
- 'black': 10
-}
-print("dic_one:", dic_one)
-print("dic_one length:", len(dic_one))
-print("dic_one red key is:", dic_one['red'])
-
-print("")
-print ("".center(50, '#'))
-print (" iterating over dictionary with FOR LOOP ".center(50, '#'))
-print ("".center(50, '#'))
-print('Iterate over dic.items()')
-for key, value in dic_one.items():
-    print('for key: {}, value: {}'.format(key, value))
-print('Iterate over dic.keys()')
-for key in dic_one.keys():
-    print('for key:', key)
-print('Iterate over dic.values()')
-for values in dic_one.values():
-    print('for values:', values)
-```
-
-> play with it on this [example](https://repl.it/@andrescabana86/python-tuples-lists-diccionaries) :video_game:
 
 </br>
 
