@@ -361,6 +361,29 @@ if not age>=18:
 
 </br>
 
+## **Comparison operators**
+
+```python
+age = 18
+
+if age==18:
+    print("is 18 years old")
+    
+if age!=18:
+    print("is not 18")
+
+if age>18:
+    print("is older than 18")
+
+if age>=18:
+    print("is 18 or older than 18")
+
+if age<=18:
+    print("is 18 or younger than 18")
+```
+
+</br>
+
 ## **Loops and Iterators**
 
 ### while/for
