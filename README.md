@@ -254,6 +254,14 @@ for key in dic_one.keys():
 print('Iterate over dic.values()')
 for values in dic_one.values():
     print('for values:', values)
+    
+# search if a key exists inside a dictionary
+key_name = "key_1"
+dictionary_to_test_false = { "no_key": "value" }
+dictionary_to_test_true = { "key_1": "value" }
+
+key_name in dictionary_to_test_false # returns false
+key_name in dictionary_to_test_true # returns true
 ```
 
 > play with it on this [example](https://repl.it/@andrescabana86/python-tuples-lists-diccionaries) :video_game:
