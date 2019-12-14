@@ -262,6 +262,11 @@ dictionary_to_test_true = { "key_1": "value" }
 
 key_name in dictionary_to_test_false # returns false
 key_name in dictionary_to_test_true # returns true
+
+# for-loops loop over the keys
+dictionary_loop={"key_1":"value", "key_2":"value", "key_3":"value", "key_4":"value"}
+for key in dictionary:
+    print('key is', key)
 ```
 
 > play with it on this [example](https://repl.it/@andrescabana86/python-tuples-lists-diccionaries) :video_game:
