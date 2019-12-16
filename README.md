@@ -127,6 +127,19 @@ print (" Iterate tuple inverted ".center(50, '#'))
 print ("".center(50, '#'))
 for idx in reversed(range(len(tuple_two))):
     print("value:", tuple_two[idx])
+    
+# destructuring tuples
+tuple_example_1 = 1,2,3,4,5
+first_elm, second_elm = tuple_example_1
+print("")
+print ("".center(50, '#'))
+print (" Destructuring tuples ".center(50, '#'))
+print ("".center(50, '#'))
+print("first_elm")
+print(first_elm)
+print("second_elm")
+print(second_elm)
+
 ```
 
 ### Lists
