@@ -224,6 +224,18 @@ print (" Iterate list inverted ".center(50, '#'))
 print ("".center(50, '#'))
 for idx in reversed(range(len(list_one))):
     print("value:", list_one[idx])
+    
+# destructuring lists
+list_example_1 = [1,2,3,4,5]
+first_elm, second_elm = list_example_1
+print("")
+print ("".center(50, '#'))
+print (" Destructuring lists ".center(50, '#'))
+print ("".center(50, '#'))
+print("first_elm")
+print(first_elm)
+print("second_elm")
+print(second_elm)
 ```
 
 ### Dictionaries
